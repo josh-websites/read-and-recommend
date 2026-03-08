@@ -1,0 +1,21 @@
+# robots.txt for Read & Recommend
+
+User-agent: *
+Allow: /
+
+# Allow all content pages
+Allow: /reviews/
+Allow: /products/
+Allow: /genres/
+
+# Block backend files and directories
+Disallow: /vault/
+Disallow: /scripts/
+Disallow: /templates/
+Disallow: /.git/
+Disallow: /*.py$
+Disallow: /*.bat$
+Disallow: /*.md$
+
+# Sitemap location
+Sitemap: https://readandrecommend.com/sitemap.xml
