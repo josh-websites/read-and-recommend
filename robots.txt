@@ -3,19 +3,12 @@
 User-agent: *
 Allow: /
 
-# Allow all content pages
-Allow: /reviews/
-Allow: /products/
-Allow: /genres/
+# Blog content
+Allow: /blog/
+Allow: /blog/tag/
 
-# Block backend files and directories
-Disallow: /vault/
-Disallow: /scripts/
-Disallow: /templates/
+# Block non-content paths
 Disallow: /.git/
-Disallow: /*.py$
-Disallow: /*.bat$
-Disallow: /*.md$
 
-# Sitemap location
+# Sitemap
 Sitemap: https://readandrecommend.com/sitemap.xml
