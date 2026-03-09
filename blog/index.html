@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   
-  <title>Read & Recommend Blog – Tips, Updates & Writing Insights - Read &amp; Recommend</title>
+  <title>Read & Recommend Blog – Book Recommendations & Reading Lists - Read &amp; Recommend</title>
   
 
-  <meta name="description" content="Read the latest tips, writing strategies, and product updates from the creators of Read & Recommend.">
+  <meta name="description" content="Book recommendations, reading lists, and hidden gems from Read & Recommend.">
   <meta name="author" content="Read & Recommend">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -18,8 +18,8 @@
   
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Read & Recommend Blog – Tips, Updates & Writing Insights">
-  <meta property="og:description" content="Read the latest tips, writing strategies, and product updates from the creators of Read & Recommend.">
+  <meta property="og:title" content="Read & Recommend Blog – Book Recommendations & Reading Lists">
+  <meta property="og:description" content="Book recommendations, reading lists, and hidden gems from Read & Recommend.">
   
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://readandrecommend.com/blog/">
@@ -29,8 +29,8 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Read & Recommend Blog – Tips, Updates & Writing Insights">
-  <meta name="twitter:description" content="Read the latest tips, writing strategies, and product updates from the creators of Read & Recommend.">
+  <meta name="twitter:title" content="Read & Recommend Blog – Book Recommendations & Reading Lists">
+  <meta name="twitter:description" content="Book recommendations, reading lists, and hidden gems from Read & Recommend.">
   <meta name="twitter:image" content="https://readandrecommend.com/images/blog/default.webp">
 
   <!-- Schema.org JSON-LD -->
@@ -39,7 +39,7 @@
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "Read & Recommend Blog",
-  "description": "Read the latest tips, writing strategies, and product updates from the creators of Read & Recommend.",
+  "description": "Book recommendations, reading lists, and hidden gems from Read & Recommend.",
   "url": "https://readandrecommend.com/blog/"
 }
   </script>
@@ -135,6 +135,28 @@
     .retro-welcome a:hover {
       color: #1a3d0a !important;
     }
+    /* Retro 90s Amazon button */
+    .retro-amazon-btn {
+      display: inline-block;
+      background: linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 40%, #a0a0a0 100%);
+      border: 3px outset #d0d0d0;
+      padding: 8px 20px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000 !important;
+      text-decoration: none !important;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+    .retro-amazon-btn:hover {
+      background: linear-gradient(180deg, #f0f0f0 0%, #d0d0d0 40%, #b0b0b0 100%);
+      color: #2d5016 !important;
+    }
+    .retro-amazon-btn:active {
+      border-style: inset;
+      background: linear-gradient(180deg, #a0a0a0 0%, #c0c0c0 60%, #e0e0e0 100%);
+    }
   </style>
 </head>
   <body class="retro-bg m-0 p-0 md:p-5">
@@ -160,14 +182,18 @@
   <p class="text-sm mt-1 mb-0" style="color: #c9e4b0;">Book recommendations, reviews, and reading lists.</p>
 </div>
 
-<div class="grid gap-4 sm:grid-cols-2">
-<a href="/blog/horror-books-youve-never-heard-of/" class="block retro-card p-4 no-underline hover:no-underline transition">
-      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">17 Horror Books You've Probably Never Heard Of</h3>
-      <p class="text-sm mt-2 mb-0" style="color: #555;">Forget Stephen King. Forget Nick Cutter. These are the horror books that even horror readers haven't found yet.</p>
+<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<a href="/blog/horror-books-youve-never-heard-of/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+      <img src="/images/blog/horror-books-youve-never-heard-of.webp" alt="17 Horror Books You've Probably Never Heard Of" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">17 Horror Books You've Probably Never Heard Of</h3>
+      <p class="text-xs mt-1 mb-2" style="color: #888;">March 09, 2026</p>
+      <p class="text-sm mt-0 mb-0" style="color: #555;">Forget Stephen King. Forget Nick Cutter. These are the horror books that even horror readers haven't found yet.</p>
     </a>
-<a href="/blog/adult-coming-of-age-books/" class="block retro-card p-4 no-underline hover:no-underline transition">
-      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">15 Books About the Quiet Crisis of Being an Adult</h3>
-      <p class="text-sm mt-2 mb-0" style="color: #555;">Nobody warns you that growing up feels like this. These 15 books understand.</p>
+<a href="/blog/adult-coming-of-age-books/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+      <img src="/images/blog/adult-coming-of-age-books.webp" alt="15 Books About the Quiet Crisis of Being an Adult" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">15 Books About the Quiet Crisis of Being an Adult</h3>
+      <p class="text-xs mt-1 mb-2" style="color: #888;">March 05, 2026</p>
+      <p class="text-sm mt-0 mb-0" style="color: #555;">Nobody warns you that growing up feels like this. These 15 books understand.</p>
     </a>
 </div>
       </div>
