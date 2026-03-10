@@ -304,6 +304,22 @@
     <a href="/about/">About</a>
   </div>
 </nav>
+      <!-- Plane Banner -->
+<style>
+@keyframes flyacross {
+  from { transform: translateX(calc(100vw + 200px)); }
+  to { transform: translateX(-600px); }
+}
+</style>
+<div id="plane-banner" style="display:none; position:fixed; top:40px; left:0; width:100vw; height:80px; z-index:9999; pointer-events:none; overflow:hidden;">
+  <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" id="plane-link" style="display:inline-block; pointer-events:auto; animation: flyacross 28s linear forwards;">
+    <img src="/images/site/substack-plane.gif" alt="Subscribe on Substack" style="height:70px;">
+  </a>
+</div>
+<script>
+setTimeout(function(){document.getElementById('plane-banner').style.display='block';},5000);
+document.getElementById('plane-link').addEventListener('animationend',function(){document.getElementById('plane-banner').style.display='none';});
+</script>
 
       <div class="p-4 md:p-5">
         <!-- Title block -->
@@ -419,14 +435,14 @@
   </div>
   <div class="grid sm:grid-cols-2 gap-4">
     
-    <a href="/blog/best-books-to-read-aloud-to-someone/" class="block retro-card p-4 no-underline hover:no-underline transition">
-      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">The Best Books to Read Aloud to Someone You Love</h3>
-      <p class="text-sm mt-2 mb-0" style="color: #555;">Reading to someone at night is the most underrated thing you can do for a relationship. Here's what to read.</p>
+    <a href="/blog/horror-books-youve-never-heard-of/" class="block retro-card p-4 no-underline hover:no-underline transition">
+      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">17 Horror Books You've Probably Never Heard Of</h3>
+      <p class="text-sm mt-2 mb-0" style="color: #555;">Forget Stephen King. Forget Nick Cutter. These are the horror books that even horror readers haven't found yet.</p>
     </a>
     
-    <a href="/blog/best-books-youve-never-heard-of/" class="block retro-card p-4 no-underline hover:no-underline transition">
-      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">12 Incredible Books You've Probably Never Heard Of</h3>
-      <p class="text-sm mt-2 mb-0" style="color: #555;">Sick of the same recommendations? These are the books nobody talks about but nobody forgets.</p>
+    <a href="/blog/best-sci-fi-horror-books/" class="block retro-card p-4 no-underline hover:no-underline transition">
+      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">15 Sci-Fi Horror Books Where the Science Is the Monster</h3>
+      <p class="text-sm mt-2 mb-0" style="color: #555;">When the experiment goes wrong, the AI wakes up, or the DNA splices itself into something new — these are the books that turn science into nightmare fuel.</p>
     </a>
     
   </div>
@@ -448,6 +464,8 @@
     <a href="/privacy/" class="underline" style="color: #8ab870;">Privacy Policy</a>
     <span class="mx-1">|</span>
     <a href="https://www.reddit.com/r/Readandrecommend/" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">r/Readandrecommend</a>
+    <span class="mx-1">|</span>
+    <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">Subscribe on Substack</a>
   </div>
 </footer>
     </div>

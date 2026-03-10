@@ -167,6 +167,22 @@
     <a href="/about/">About</a>
   </div>
 </nav>
+      <!-- Plane Banner -->
+<style>
+@keyframes flyacross {
+  from { transform: translateX(calc(100vw + 200px)); }
+  to { transform: translateX(-600px); }
+}
+</style>
+<div id="plane-banner" style="display:none; position:fixed; top:40px; left:0; width:100vw; height:80px; z-index:9999; pointer-events:none; overflow:hidden;">
+  <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" id="plane-link" style="display:inline-block; pointer-events:auto; animation: flyacross 28s linear forwards;">
+    <img src="/images/site/substack-plane.gif" alt="Subscribe on Substack" style="height:70px;">
+  </a>
+</div>
+<script>
+setTimeout(function(){document.getElementById('plane-banner').style.display='block';},5000);
+document.getElementById('plane-link').addEventListener('animationend',function(){document.getElementById('plane-banner').style.display='none';});
+</script>
 
       <div class="p-4 md:p-5">
         <div class="retro-section-header text-center py-3 px-4 mb-5">
@@ -226,6 +242,8 @@
     <a href="/privacy/" class="underline" style="color: #8ab870;">Privacy Policy</a>
     <span class="mx-1">|</span>
     <a href="https://www.reddit.com/r/Readandrecommend/" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">r/Readandrecommend</a>
+    <span class="mx-1">|</span>
+    <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">Subscribe on Substack</a>
   </div>
 </footer>
     </div>

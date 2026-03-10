@@ -176,6 +176,22 @@
     <span class="active">About</span>
   </div>
 </nav>
+      <!-- Plane Banner -->
+<style>
+@keyframes flyacross {
+  from { transform: translateX(calc(100vw + 200px)); }
+  to { transform: translateX(-600px); }
+}
+</style>
+<div id="plane-banner" style="display:none; position:fixed; top:40px; left:0; width:100vw; height:80px; z-index:9999; pointer-events:none; overflow:hidden;">
+  <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" id="plane-link" style="display:inline-block; pointer-events:auto; animation: flyacross 28s linear forwards;">
+    <img src="/images/site/substack-plane.gif" alt="Subscribe on Substack" style="height:70px;">
+  </a>
+</div>
+<script>
+setTimeout(function(){document.getElementById('plane-banner').style.display='block';},5000);
+document.getElementById('plane-link').addEventListener('animationend',function(){document.getElementById('plane-banner').style.display='none';});
+</script>
 
       <div class="p-4 md:p-5">
         <!-- Title block -->
@@ -206,13 +222,19 @@
 
 <p class='text-base text-gray-700'>I'm upfront about this: I haven't read every book on every list. But every book is here because I've done the work to understand why it belongs. This site also serves as my personal TBR list. When I have personal experience with a book, you'll know. When I'm drawing on research and reader recommendations, that's clear too.</p>
 
+<h2 class='text-2xl font-semibold mt-8'>Follow Read & Recommend</h2>
+
+<ul class='list-disc list-inside my-2'>
+    <li><a href="https://substack.com/@readandrecommend" class="text-blue-600 underline hover:text-blue-800 transition" target="_blank">Read & Recommend on Substack</a> — subscribe for new lists and recommendations</li>
+    <li><a href="https://www.reddit.com/r/Readandrecommend/" class="text-blue-600 underline hover:text-blue-800 transition" target="_blank">r/Readandrecommend</a> — the subreddit for this site</li>
+</ul>
+
 <h2 class='text-2xl font-semibold mt-8'>Connect With Me</h2>
 
 <ul class='list-disc list-inside my-2'>
     <li><a href="https://medium.com/@JoshHinton" class="text-blue-600 underline hover:text-blue-800 transition" target="_blank">J.M. Hinton on Medium</a> — stories and essays about whatever interests me</li>
     <li><a href="https://jmhinton.substack.com/" class="text-blue-600 underline hover:text-blue-800 transition" target="_blank">J.M. Hinton's Substack</a> — writing notes and the occasional story</li>
     <li><a href="https://typeslate.com/" class="text-blue-600 underline hover:text-blue-800 transition" target="_blank">TypeSlate</a> — a distraction-free writing app I built</li>
-    <li><a href="https://www.reddit.com/r/Readandrecommend/" class="text-blue-600 underline hover:text-blue-800 transition" target="_blank">r/Readandrecommend</a> — the subreddit for this site</li>
 </ul>
 
 <h2 class='text-2xl font-semibold mt-8'>Support This Site</h2>
@@ -237,6 +259,8 @@
     <a href="/privacy/" class="underline" style="color: #8ab870;">Privacy Policy</a>
     <span class="mx-1">|</span>
     <a href="https://www.reddit.com/r/Readandrecommend/" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">r/Readandrecommend</a>
+    <span class="mx-1">|</span>
+    <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">Subscribe on Substack</a>
   </div>
 </footer>
     </div>
