@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <title>Books - Read & Recommend - Read &amp; Recommend</title>
+  
+
+  <meta name="description" content="Browse all 96 books featured on Read & Recommend — details, reader insights, and curated recommendations.">
+  <meta name="author" content="Read & Recommend">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  
+  <link rel="canonical" href="https://readandrecommend.com/books/" />
+  
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Books - Read & Recommend">
+  <meta property="og:description" content="Browse all 96 books featured on Read & Recommend — details, reader insights, and curated recommendations.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://readandrecommend.com/books/">
+  
+  <meta property="og:image" content="https://readandrecommend.com/images/blog/default.webp">
+  <meta property="og:site_name" content="Read &amp; Recommend">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Books - Read & Recommend">
+  <meta name="twitter:description" content="Browse all 96 books featured on Read & Recommend — details, reader insights, and curated recommendations.">
+  <meta name="twitter:image" content="https://readandrecommend.com/images/blog/default.webp">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Books - Read & Recommend",
+  "description": "All books featured on Read & Recommend with details, reader insights, and recommendations.",
+  "url": "https://readandrecommend.com/books/"
+}
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    /* Retro dotted background pattern */
+    .retro-bg {
+      background-color: #e8ebe5;
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="%23e8ebe5"/><circle cx="10" cy="10" r="1" fill="%23d4d8d1"/></svg>');
+    }
+    /* Retro container */
+    .retro-container {
+      background-color: #f5f6f3;
+      border: 5px ridge #4a6741;
+    }
+    /* Green gradient header */
+    .retro-header {
+      background: linear-gradient(180deg, #2d5016 0%, #3a6b1f 50%, #2d5016 100%);
+      border-bottom: 5px groove #5a8a3d;
+    }
+    .retro-header h1 {
+      color: #e8f4d7;
+      text-shadow: 3px 3px #1a3d0a, -1px -1px #4a7a2f;
+    }
+    .retro-header p {
+      color: #c9e4b0;
+    }
+    /* Dark nav bar with outset buttons */
+    .retro-nav {
+      background-color: #3d3d3d;
+      border-bottom: 3px solid #5a8a3d;
+    }
+    .retro-nav a, .retro-nav span {
+      color: #c9e4b0;
+      background-color: #5d5d5d;
+      border: 3px outset #7a7a7a;
+      padding: 6px 16px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .retro-nav a:hover {
+      background-color: #4a6741;
+      color: #e8f4d7;
+    }
+    .retro-nav a:active {
+      border-style: inset;
+    }
+    .retro-nav span.active {
+      background-color: #4a6741;
+      color: #e8f4d7;
+      border-style: inset;
+    }
+    /* Retro content sections */
+    .retro-welcome {
+      background-color: #fafbf8;
+      border: 4px dashed #6b8f5c;
+    }
+    .retro-section-header {
+      background: linear-gradient(90deg, #4a6741, #5a8a3d);
+      color: #ffffff;
+      border: 3px solid #2d5016;
+    }
+    .retro-content-box {
+      background-color: #f9faf6;
+      border: 4px double #4a6741;
+    }
+    /* Blog card styling */
+    .retro-card {
+      background-color: #f9faf6;
+      border: 3px double #4a6741;
+    }
+    .retro-card:hover {
+      background-color: #eef2e8;
+    }
+    /* Override Tailwind styles for retro green theme */
+    .retro-content-box h2,
+    .retro-content-box h3,
+    .retro-welcome h2,
+    .retro-welcome h3 {
+      color: #2d5016;
+    }
+    .retro-content-box a,
+    .retro-welcome a {
+      color: #2d5016 !important;
+      text-decoration: underline;
+    }
+    .retro-content-box a:hover,
+    .retro-welcome a:hover {
+      color: #1a3d0a !important;
+    }
+    /* Retro 90s Amazon button */
+    .retro-amazon-btn {
+      display: inline-block;
+      background: linear-gradient(180deg, #e8e8e8 0%, #c0c0c0 40%, #a0a0a0 100%);
+      border: 3px outset #d0d0d0;
+      padding: 8px 20px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000 !important;
+      text-decoration: none !important;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+    .retro-amazon-btn:hover {
+      background: linear-gradient(180deg, #f0f0f0 0%, #d0d0d0 40%, #b0b0b0 100%);
+      color: #2d5016 !important;
+    }
+    .retro-amazon-btn:active {
+      border-style: inset;
+      background: linear-gradient(180deg, #a0a0a0 0%, #c0c0c0 60%, #e0e0e0 100%);
+    }
+  </style>
+</head>
+  <body class="retro-bg m-0 p-0 md:p-5">
+    <div class="max-w-3xl mx-auto retro-container">
+      <!-- Retro Header -->
+<header class="retro-header text-center py-5">
+  <h1 class="text-3xl md:text-5xl font-bold m-0">Read & Recommend</h1>
+  <p class="text-base md:text-lg italic mt-1">Book recommendations, reviews, and reading lists.</p>
+</header>
+
+<!-- Retro Nav Bar -->
+<nav class="retro-nav text-center py-2 px-2">
+  <div class="flex justify-center flex-wrap gap-1 md:gap-2">
+    
+    <a href="/">Home</a>
+    
+    <a href="/blog/">Blog</a>
+    
+    <span class="active">Books</span>
+    
+    <a href="/authors/">Authors</a>
+    
+    <a href="/about/">About</a>
+    
+  </div>
+</nav>
+      <!-- Plane Banner -->
+<style>
+@keyframes flyacross {
+  from { transform: translateX(calc(100vw + 200px)); }
+  to { transform: translateX(-600px); }
+}
+</style>
+<div id="plane-banner" style="display:none; position:fixed; top:40px; left:0; width:100vw; height:80px; z-index:9999; pointer-events:none; overflow:hidden;">
+  <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" id="plane-link" style="display:inline-block; pointer-events:auto; animation: flyacross 28s linear forwards;">
+    <img src="/images/site/substack-plane.gif" alt="Subscribe on Substack" style="height:70px;">
+  </a>
+</div>
+<script>
+setTimeout(function(){document.getElementById('plane-banner').style.display='block';},5000);
+document.getElementById('plane-link').addEventListener('animationend',function(){document.getElementById('plane-banner').style.display='none';});
+</script>
+
+      <div class="p-4 md:p-5">
+        <div class="retro-section-header text-center py-3 px-4 mb-5">
+  <h1 class="text-2xl md:text-3xl font-bold m-0">Books</h1>
+  <p class="text-sm mt-1 mb-0" style="color: #c9e4b0;">96 books featured on Read &amp; Recommend</p>
+</div>
+
+<div class="text-center mb-4 flex flex-wrap justify-center gap-2" id="book-filters">
+  <a href="#" class="book-filter-link" data-val="all" style="color: #2d5016; text-decoration: underline; font-size: 15px; font-weight: bold;">All</a>
+  <a href="#" class="book-filter-link" data-val="biography-&-autobiography" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Biography & Autobiography</a>
+  <a href="#" class="book-filter-link" data-val="computer-programmers" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Computer programmers</a>
+  <a href="#" class="book-filter-link" data-val="fiction" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Fiction</a>
+  <a href="#" class="book-filter-link" data-val="health-&-fitness" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Health & Fitness</a>
+  <a href="#" class="book-filter-link" data-val="history" style="color: #2d5016; text-decoration: underline; font-size: 15px;">History</a>
+  <a href="#" class="book-filter-link" data-val="literary-collections" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Literary Collections</a>
+  <a href="#" class="book-filter-link" data-val="true-crime" style="color: #2d5016; text-decoration: underline; font-size: 15px;">True Crime</a>
+  <a href="#" class="book-filter-link" data-val="young-adult-fiction" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Young Adult Fiction</a>
+</div>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+<a href="/books/a-heartbreaking-work-of-staggering-genius/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="biography-&-autobiography">
+      <img src="/images/books/book-fc92681bd268.webp" alt="A Heartbreaking Work Of Staggering Genius" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">A Heartbreaking Work Of Staggering Genius</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Dave Eggers</p>
+    </a>
+<a href="/books/alas-babylon/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-b709fa5b69e2.webp" alt="Alas, Babylon" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Alas, Babylon</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Pat Frank</p>
+    </a>
+<a href="/books/altered-carbon/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-cd4a374fd459.webp" alt="Altered Carbon" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Altered Carbon</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Richard K. Morgan</p>
+    </a>
+<a href="/books/american-pastoral/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-d0fa5bbe9104.webp" alt="American Pastoral" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">American Pastoral</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Philip Roth</p>
+    </a>
+<a href="/books/ancestor/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-d3f199379e7d.webp" alt="Ancestor" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Ancestor</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Scott Sigler</p>
+    </a>
+<a href="/books/and-then-there-were-none/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-4d787c059997.webp" alt="And Then There Were None" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">And Then There Were None</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Agatha Christie</p>
+    </a>
+<a href="/books/annihilation/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-eb880bac022d.webp" alt="Annihilation" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Annihilation</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Jeff VanderMeer</p>
+    </a>
+<a href="/books/atonement/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-8aef45dde452.webp" alt="Atonement" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Atonement</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ian McEwan</p>
+    </a>
+<a href="/books/behind-her-eyes/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-e689bbb55c56.webp" alt="Behind Her Eyes" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Behind Her Eyes</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Sarah Pinborough</p>
+    </a>
+<a href="/books/blindness/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
+      <img src="/images/books/book-70b52d049efd.webp" alt="Blindness" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Blindness</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">José Saramago</p>
+    </a>
+<a href="/books/blindsight/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f1bb860994da.webp" alt="Blindsight" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Blindsight</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Peter Watts</p>
+    </a>
+<a href="/books/blood-music/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-766482874e43.webp" alt="Blood Music" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Blood Music</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Greg Bear</p>
+    </a>
+<a href="/books/break-the-bodies-haunt-the-bones/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-52323e833509.webp" alt="Break the Bodies, Haunt the Bones" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Break the Bodies, Haunt the Bones</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Micah Dean Hicks</p>
+    </a>
+<a href="/books/coming-up-for-air/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="literary-collections">
+      <img src="/images/books/book-206a6304483f.webp" alt="Coming Up for Air" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Coming Up for Air</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">George Orwell</p>
+    </a>
+<a href="/books/confessions/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-fcbfcfffba88.webp" alt="Confessions" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Confessions</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Kanae Minato</p>
+    </a>
+<a href="/books/convenience-store-woman/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-72e2513bc880.webp" alt="Convenience Store Woman" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Convenience Store Woman</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Sayaka Murata</p>
+    </a>
+<a href="/books/coraline/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-8f689620e0f0.webp" alt="Coraline" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Coraline</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Neil Gaiman</p>
+    </a>
+<a href="/books/count-zero/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-470c4ec27373.webp" alt="Count Zero" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Count Zero</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">William Gibson</p>
+    </a>
+<a href="/books/do-androids-dream-of-electric-sheep/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-fe5f54845483.webp" alt="Do Androids Dream of Electric Sheep?" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Do Androids Dream of Electric Sheep?</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Philip K. Dick</p>
+    </a>
+<a href="/books/einsteins-dreams/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
+      <img src="/images/books/book-2e8e2440f31a.webp" alt="Einstein's Dreams" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Einstein's Dreams</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Alan Lightman</p>
+    </a>
+<a href="/books/eleanor-oliphant-is-completely-fine/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
+      <img src="/images/books/book-5ed190017af1.webp" alt="Eleanor Oliphant Is Completely Fine" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Eleanor Oliphant Is Completely Fine</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Gail Honeyman</p>
+    </a>
+<a href="/books/fahrenheit-451/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-7aff531cee1e.webp" alt="Fahrenheit 451" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Fahrenheit 451</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ray Bradbury</p>
+    </a>
+<a href="/books/fear/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-ffb0423ab204.webp" alt="Fear" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Fear</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ronald Kelly</p>
+    </a>
+<a href="/books/gone-girl/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-b0b0765beb30.webp" alt="Gone Girl" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Gone Girl</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Gillian Flynn</p>
+    </a>
+<a href="/books/harvest-home/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-e8a6b689a6d9.webp" alt="Harvest Home" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Harvest Home</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Thomas Tryon</p>
+    </a>
+<a href="/books/horsefly/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-475153b2f87b.webp" alt="Horsefly" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Horsefly</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Mireille Gagné</p>
+    </a>
+<a href="/books/im-thinking-of-ending-things/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-fecd5958efb4.webp" alt="I'm Thinking of Ending Things" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">I'm Thinking of Ending Things</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Iain Reid</p>
+    </a>
+<a href="/books/immortal-longings/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-8812d64fea8a.webp" alt="Immortal Longings" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Immortal Longings</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Chloe Gong</p>
+    </a>
+<a href="/books/into-the-drowning-deep/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-525234bd5631.webp" alt="Into the Drowning Deep" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Into the Drowning Deep</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Mira Grant</p>
+    </a>
+<a href="/books/jurassic-park/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-58a500d36134.webp" alt="Jurassic Park" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Jurassic Park</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Michael Crichton</p>
+    </a>
+<a href="/books/life-of-pi/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f770e2bf4e09.webp" alt="Life of Pi" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Life of Pi</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Yann Martel</p>
+    </a>
+<a href="/books/mexican-gothic/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-578fb2c10467.webp" alt="Mexican Gothic" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Mexican Gothic</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Silvia Moreno-Garcia</p>
+    </a>
+<a href="/books/neuromancer/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-5f5c0e883a67.webp" alt="Neuromancer" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Neuromancer</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">William Gibson</p>
+    </a>
+<a href="/books/never-let-me-go/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f3c5039d5dc1.webp" alt="Never Let Me Go" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Never Let Me Go</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Kazuo Ishiguro</p>
+    </a>
+<a href="/books/normal-people/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-77d54808f283.webp" alt="Normal People" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Normal People</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Sally Rooney</p>
+    </a>
+<a href="/books/oryx-and-crake/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-2a73e128ef24.webp" alt="Oryx and Crake" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Oryx and Crake</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Margaret Atwood</p>
+    </a>
+<a href="/books/outside-the-dog-museum/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-faac3fa82bf6.webp" alt="Outside the Dog Museum" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Outside the Dog Museum</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Jonathan Carroll</p>
+    </a>
+<a href="/books/parable-of-the-sower/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f6910a79e704.webp" alt="Parable of the Sower" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Parable of the Sower</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Octavia E. Butler</p>
+    </a>
+<a href="/books/parasite-eve/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-cb1c3718ed9b.webp" alt="Parasite Eve" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Parasite Eve</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Hideaki Sena</p>
+    </a>
+<a href="/books/piranesi/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-edf0333795ed.webp" alt="Piranesi" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Piranesi</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Susanna Clarke</p>
+    </a>
+<a href="/books/project-hail-mary/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-8585c13f89a3.webp" alt="Project Hail Mary" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Project Hail Mary</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Andy Weir</p>
+    </a>
+<a href="/books/ready-player-one/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f5bdd058d1b3.webp" alt="Ready Player One" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Ready Player One</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ernest Cline</p>
+    </a>
+<a href="/books/rebecca/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="young-adult-fiction">
+      <img src="/images/books/book-e44911d21768.webp" alt="Rebecca" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Rebecca</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Daphne du Maurier</p>
+    </a>
+<a href="/books/recursion/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-48d1c3a869ba.webp" alt="Recursion" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Recursion</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Blake Crouch</p>
+    </a>
+<a href="/books/relic/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-517c62737cf0.webp" alt="Relic" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Relic</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Douglas Preston, Lincoln Child</p>
+    </a>
+<a href="/books/replay/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-eb4bac91d37c.webp" alt="Replay" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Replay</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ken Grimwood</p>
+    </a>
+<a href="/books/root-rot/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-87ce194ae89f.webp" alt="Root Rot" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Root Rot</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Saskia Nislow</p>
+    </a>
+<a href="/books/snow-crash/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="computer-programmers">
+      <img src="/images/books/book-ef297c77cead.webp" alt="Snow Crash" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Snow Crash</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Neal Stephenson</p>
+    </a>
+<a href="/books/sphere/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-791ad20f77e0.webp" alt="Sphere" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Sphere</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Michael Crichton</p>
+    </a>
+<a href="/books/station-eleven/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-e8743a143199.webp" alt="Station Eleven" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Station Eleven</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Emily St. John Mandel</p>
+    </a>
+<a href="/books/stoner/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-41387c02bbb1.webp" alt="Stoner" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Stoner</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">John Williams</p>
+    </a>
+<a href="/books/sunglasses-after-dark/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-cd2524ba6dfc.webp" alt="Sunglasses After Dark" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Sunglasses After Dark</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Nancy A. Collins</p>
+    </a>
+<a href="/books/the-andromeda-strain/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f143d068c899.webp" alt="The Andromeda Strain" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Andromeda Strain</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Michael Crichton</p>
+    </a>
+<a href="/books/the-bell-jar/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-36875a119069.webp" alt="The Bell Jar" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Bell Jar</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Sylvia Plath</p>
+    </a>
+<a href="/books/the-big-meat/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-de36e1140a58.webp" alt="The Big Meat" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Big Meat</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Carlton Mellick III</p>
+    </a>
+<a href="/books/the-castle-of-otranto/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-b41458ec403c.webp" alt="The Castle of Otranto" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Castle of Otranto</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Horace Walpole</p>
+    </a>
+<a href="/books/the-changeling/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-06f4328bad23.webp" alt="The Changeling" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Changeling</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Victor LaValle</p>
+    </a>
+<a href="/books/the-children-of-men/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-57f4c137dbb0.webp" alt="The Children of Men" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Children of Men</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">P. D. James</p>
+    </a>
+<a href="/books/the-cobra-event/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-2dec194546c3.webp" alt="The Cobra Event" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Cobra Event</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Richard Preston</p>
+    </a>
+<a href="/books/the-cold-vanish/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="true-crime">
+      <img src="/images/books/book-62fb13cb3919.webp" alt="The Cold Vanish" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Cold Vanish</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Jon Billman</p>
+    </a>
+<a href="/books/the-diamond-age/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-99dd9c74a8b7.webp" alt="The Diamond Age" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Diamond Age</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Neal Stephenson</p>
+    </a>
+<a href="/books/the-dispossessed/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-e993e6b04fe4.webp" alt="The Dispossessed" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Dispossessed</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ursula K. Le Guin</p>
+    </a>
+<a href="/books/the-elementals/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-6a146477a740.webp" alt="The Elementals" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Elementals</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Michael McDowell</p>
+    </a>
+<a href="/books/the-end-of-the-story/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-6adcc890399a.webp" alt="The End of the Story" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The End of the Story</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Lydia Davis</p>
+    </a>
+<a href="/books/the-fisherman/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
+      <img src="/images/books/book-bab6ef213441.webp" alt="The Fisherman" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Fisherman</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">John Langan</p>
+    </a>
+<a href="/books/the-handmaids-tale/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f160ced21889.webp" alt="The Handmaid's Tale" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Handmaid's Tale</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Margaret Atwood</p>
+    </a>
+<a href="/books/the-historian/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-c33a0b19fbea.webp" alt="The Historian" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Historian</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Elizabeth Kostova</p>
+    </a>
+<a href="/books/the-hollow-places/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-9284dcd9e5be.webp" alt="The Hollow Places" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Hollow Places</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">T. Kingfisher</p>
+    </a>
+<a href="/books/the-hot-zone/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="health-&-fitness">
+      <img src="/images/books/book-70b7b229440a.webp" alt="The Hot Zone" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Hot Zone</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Richard Preston</p>
+    </a>
+<a href="/books/the-hunger/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-173d2465a94c.webp" alt="The Hunger" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Hunger</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Alma Katsu</p>
+    </a>
+<a href="/books/the-last-man/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-e9fce0065cc5.webp" alt="The Last Man" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Last Man</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Mary Wollstonecraft Shelley</p>
+    </a>
+<a href="/books/the-library-at-mount-char/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-148bca8e91cb.webp" alt="The Library at Mount Char" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Library at Mount Char</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Scott Hawkins</p>
+    </a>
+<a href="/books/the-little-stranger/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-5175ff2cb00e.webp" alt="The Little Stranger" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Little Stranger</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Sarah Waters</p>
+    </a>
+<a href="/books/the-luminous-dead/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-39ce8bc715c8.webp" alt="The Luminous Dead" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Luminous Dead</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Caitlin Starling</p>
+    </a>
+<a href="/books/the-magic-cottage/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-f3e283366655.webp" alt="The Magic Cottage" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Magic Cottage</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">James Herbert</p>
+    </a>
+<a href="/books/the-magicians/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-55bbc5f1caf9.webp" alt="The Magicians" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Magicians</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Lev Grossman</p>
+    </a>
+<a href="/books/the-murder-of-roger-ackroyd/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-1d5c029ee9ea.webp" alt="The Murder of Roger Ackroyd" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Murder of Roger Ackroyd</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Agatha Christie</p>
+    </a>
+<a href="/books/the-pale-king/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-c9276a148fdf.webp" alt="The Pale King" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Pale King</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">David Foster Wallace</p>
+    </a>
+<a href="/books/the-power/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-26295dc0642d.webp" alt="The Power" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Power</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Naomi Alderman</p>
+    </a>
+<a href="/books/the-road/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-851507645dd0.webp" alt="The Road" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Road</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Cormac McCarthy</p>
+    </a>
+<a href="/books/the-salt-grows-heavy/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-b06fb3fcb2f5.webp" alt="The Salt Grows Heavy" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Salt Grows Heavy</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Cassandra Khaw</p>
+    </a>
+<a href="/books/the-stories-of-breece-dj-pancake/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-5378ef9c728b.webp" alt="The Stories of Breece D'J Pancake" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Stories of Breece D'J Pancake</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Breece D'J Pancake</p>
+    </a>
+<a href="/books/the-twisted-ones/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-b4d0d099d8ca.webp" alt="The Twisted Ones" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Twisted Ones</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">T. Kingfisher</p>
+    </a>
+<a href="/books/the-unwomanly-face-of-war/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="history">
+      <img src="/images/books/book-ae59933ace7e.webp" alt="The Unwomanly Face of War" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Unwomanly Face of War</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Svetlana Alexievich</p>
+    </a>
+<a href="/books/the-wasp-factory/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-4fcd9d52216a.webp" alt="The Wasp Factory" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Wasp Factory</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Iain Banks</p>
+    </a>
+<a href="/books/the-wind-up-bird-chronicle/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-b912a2569174.webp" alt="The Wind-Up Bird Chronicle" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Wind-Up Bird Chronicle</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Haruki Murakami</p>
+    </a>
+<a href="/books/the-winter-people/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-50de6de95237.webp" alt="The Winter People" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Winter People</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Jennifer McMahon</p>
+    </a>
+<a href="/books/transcendental-mutilation/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-ffdaa7837f92.webp" alt="Transcendental Mutilation" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Transcendental Mutilation</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Ryan Harding</p>
+    </a>
+<a href="/books/we-were-liars/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="young-adult-fiction">
+      <img src="/images/books/book-57d59aafb785.webp" alt="We Were Liars" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">We Were Liars</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">E. Lockhart</p>
+    </a>
+<a href="/books/we-the-drowned/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-a738153d76f2.webp" alt="We, the Drowned" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">We, the Drowned</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Carsten Jensen</p>
+    </a>
+<a href="/books/when-gravity-fails/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-311908ccfc71.webp" alt="When Gravity Fails" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">When Gravity Fails</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">George Alec Effinger</p>
+    </a>
+<a href="/books/where-the-chill-waits/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-41c3ec3b5adb.webp" alt="Where the Chill Waits" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Where the Chill Waits</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">T. Chris Martindale</p>
+    </a>
+<a href="/books/white-is-for-witching/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-ae46dad1b2fe.webp" alt="White is for Witching" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">White is for Witching</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Helen Oyeyemi</p>
+    </a>
+<a href="/books/wool/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-7ccda5196869.webp" alt="Wool" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Wool</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Hugh Howey</p>
+    </a>
+<a href="/books/wyrd-and-other-derelictions/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
+      <img src="/images/books/book-93e74837dbce.webp" alt="Wyrd and Other Derelictions" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Wyrd and Other Derelictions</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Adam Nevill</p>
+    </a>
+<a href="/books/yumi-and-the-nightmare-painter/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-4102c437c918.webp" alt="Yumi and the Nightmare Painter" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Yumi and the Nightmare Painter</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Brandon Sanderson</p>
+    </a>
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.book-filter-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var val = this.getAttribute('data-val');
+      this.parentNode.querySelectorAll('.book-filter-link').forEach(function(l) { l.style.fontWeight = 'normal'; });
+      this.style.fontWeight = 'bold';
+      document.querySelectorAll('.book-card').forEach(function(card) {
+        if (val === 'all') {
+          card.style.display = '';
+        } else {
+          var data = card.getAttribute('data-categories') || '';
+          card.style.display = data.indexOf(val) !== -1 ? '' : 'none';
+        }
+      });
+    });
+  });
+})();
+</script>
+
+      </div>
+
+      <!-- Affiliate Disclaimer -->
+<div class="text-center text-xs py-3 px-4" style="background-color: #f0f1ed; color: #555; border-top: 2px dashed #6b8f5c;">
+  This site contains affiliate links. If you purchase through these links, I may earn a small commission at no extra cost to you. <a href="/affiliate-disclosure/" class="underline" style="color: #2d5016;">Learn more</a>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-4 text-sm" style="background-color: #3d3d3d; color: #c9e4b0; border-top: 3px solid #5a8a3d;">
+  <p class="m-0">2026 Read & Recommend.</p>
+  <div class="mt-2 text-xs" style="color: #8ab870;">
+    
+    
+    <a href="/affiliate-disclosure/" class="underline" style="color: #8ab870;">Affiliate Disclosure</a>
+    
+    <span class="mx-1">|</span>
+    <a href="/privacy/" class="underline" style="color: #8ab870;">Privacy Policy</a>
+    
+    <span class="mx-1">|</span>
+    <a href="https://www.reddit.com/r/Readandrecommend/" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">r/Readandrecommend</a>
+    
+    <span class="mx-1">|</span>
+    <a href="https://substack.com/@readandrecommend" target="_blank" rel="noopener" class="underline" style="color: #8ab870;">Subscribe on Substack</a>
+    
+  </div>
+</footer>
+    </div>
+  </body>
+</html>

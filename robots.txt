@@ -6,6 +6,8 @@ Allow: /
 # Blog content
 Allow: /blog/
 Allow: /blog/tag/
+Allow: /books/
+Allow: /authors/
 
 # Block non-content paths
 Disallow: /.git/
