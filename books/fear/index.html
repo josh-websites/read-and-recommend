@@ -162,6 +162,54 @@
       background: linear-gradient(180deg, #f0f0f0 0%, #d0d0d0 40%, #b0b0b0 100%);
       color: #2d5016 !important;
     }
+    /* Section header spacing — book-style breathing room */
+    .retro-content-box h2,
+    .retro-welcome h2 {
+      margin-top: 1.8em;
+      margin-bottom: 0.6em;
+    }
+    .retro-content-box h3,
+    .retro-welcome h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .retro-content-box h4,
+    .retro-welcome h4 {
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+    }
+    /* Collapse paragraph bottom margin before headings */
+    .retro-content-box p + h2,
+    .retro-content-box p + h3,
+    .retro-content-box p + h4,
+    .retro-welcome p + h2,
+    .retro-welcome p + h3,
+    .retro-welcome p + h4 {
+      margin-top: 1.4em;
+    }
+    /* Content heading sizes */
+    .retro-content-box h2,
+    .retro-welcome h2 {
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+    .retro-content-box h3,
+    .retro-welcome h3 {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    .retro-content-box h4,
+    .retro-welcome h4 {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    /* E-reader style paragraph formatting */
+    .retro-content-box p,
+    .retro-welcome p {
+      line-height: 1.8;
+      text-indent: 1.5em;
+      margin-bottom: 0.6em;
+    }
     .retro-amazon-btn:active {
       border-style: inset;
       background: linear-gradient(180deg, #a0a0a0 0%, #c0c0c0 60%, #e0e0e0 100%);
@@ -245,6 +293,17 @@ document.getElementById('plane-link').addEventListener('animationend',function()
           </div>
         </div>
 
+        
+        <!-- Page content (unique, curated) -->
+        <div class="retro-content-box p-4 md:p-5 mb-5 prose" style="color: #333; line-height: 1.7;">
+          <h3>What Readers Say</h3>
+<p>Ronald Kelly is one of those horror authors who flies under the radar despite writing some genuinely unsettling fiction. Readers who discover Fear tend to treat it like a secret they want to share — it comes up in conversations about unique horror that never gets recommended enough. The book gets cited alongside work by other under-the-radar authors like Nancy A. Collins, Todd Keisling, and Ray Garton — writers beloved by people who have read deep into the genre and want something that doesn't feel recycled.</p>
+<p>What stands out in reader reactions is the southern gothic atmosphere. Kelly writes rural Tennessee horror with a specificity that feels lived-in rather than researched. The creature at the center of the story — part snake, part demon — is grotesque in a way that sticks with you, and the decision to filter that terror through a ten-year-old boy's perspective gives the whole thing an emotional weight that pure shock value can't achieve. Readers describe it as the kind of horror that actually manages to scare people who thought they'd become desensitized to the genre.</p>
+<h3>Who It's For</h3>
+<p>This is a book for horror readers who feel like they've seen it all and want to be genuinely unnerved again. If you gravitate toward southern gothic fiction, backwoods terror, or creature horror with real atmosphere, Fear belongs on your list. It's also a strong pick for readers who appreciate horror that leans into folklore and regional mythology rather than urban settings and modern tropes. If you've already burned through the obvious big names and want an author who deserves far more attention than he gets, Ronald Kelly is your next discovery.</p>
+<h3>Reading Context</h3>
+<p>Readers place Kelly in the company of other horror authors who specialize in rural American dread — Nancy A. Collins, Ray Garton, Todd Keisling. Fear gets recommended in threads about overlooked horror, hidden gems, and books that genuinely frightened experienced readers. If you're working through under-appreciated horror fiction, this is the kind of book that rewards the search.</p>
+        </div>
         
 
         <!-- Featured in posts -->

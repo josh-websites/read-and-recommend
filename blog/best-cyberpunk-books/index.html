@@ -274,6 +274,54 @@
       background: linear-gradient(180deg, #f0f0f0 0%, #d0d0d0 40%, #b0b0b0 100%);
       color: #2d5016 !important;
     }
+    /* Section header spacing — book-style breathing room */
+    .retro-content-box h2,
+    .retro-welcome h2 {
+      margin-top: 1.8em;
+      margin-bottom: 0.6em;
+    }
+    .retro-content-box h3,
+    .retro-welcome h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .retro-content-box h4,
+    .retro-welcome h4 {
+      margin-top: 1.2em;
+      margin-bottom: 0.4em;
+    }
+    /* Collapse paragraph bottom margin before headings */
+    .retro-content-box p + h2,
+    .retro-content-box p + h3,
+    .retro-content-box p + h4,
+    .retro-welcome p + h2,
+    .retro-welcome p + h3,
+    .retro-welcome p + h4 {
+      margin-top: 1.4em;
+    }
+    /* Content heading sizes */
+    .retro-content-box h2,
+    .retro-welcome h2 {
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+    .retro-content-box h3,
+    .retro-welcome h3 {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    .retro-content-box h4,
+    .retro-welcome h4 {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    /* E-reader style paragraph formatting */
+    .retro-content-box p,
+    .retro-welcome p {
+      line-height: 1.8;
+      text-indent: 1.5em;
+      margin-bottom: 0.6em;
+    }
     .retro-amazon-btn:active {
       border-style: inset;
       background: linear-gradient(180deg, #a0a0a0 0%, #c0c0c0 60%, #e0e0e0 100%);
@@ -428,14 +476,14 @@ document.getElementById('plane-link').addEventListener('animationend',function()
   </div>
   <div class="grid sm:grid-cols-2 gap-4">
     
-    <a href="/blog/atmospheric-horror-that-gets-under-your-skin/" class="block retro-card p-4 no-underline hover:no-underline transition">
-      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">14 Atmospheric Horror Books That Get Under Your Skin</h3>
-      <p class="text-sm mt-2 mb-0" style="color: #555;">14 Best Atmospheric Horror Books That Will Haunt You for Days</p>
+    <a href="/blog/adult-dystopian-fiction-not-ya/" class="block retro-card p-4 no-underline hover:no-underline transition">
+      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">15 Dystopian Books That Aren't About Teenagers Saving the World</h3>
+      <p class="text-sm mt-2 mb-0" style="color: #555;">Love dystopian fiction but tired of every story being about a Chosen Teen? These 15 books feature adults dealing with collapse, surveillance, and survival without a single love triangle.</p>
     </a>
     
-    <a href="/blog/best-sci-fi-horror-books/" class="block retro-card p-4 no-underline hover:no-underline transition">
-      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">15 Sci-Fi Horror Books Where the Science Is the Monster</h3>
-      <p class="text-sm mt-2 mb-0" style="color: #555;">When the experiment goes wrong, the AI wakes up, or the DNA splices itself into something new — these are the books that turn science into nightmare fuel.</p>
+    <a href="/blog/books-with-plot-twists-that-blindside-you/" class="block retro-card p-4 no-underline hover:no-underline transition">
+      <h3 class="text-lg font-bold m-0" style="color: #2d5016;">14 Books With Plot Twists That Completely Blindside You</h3>
+      <p class="text-sm mt-2 mb-0" style="color: #555;">Not just "I didn't see it coming" — these are the twists that made readers physically put the book down, stare at the wall, and then immediately flip back to reread everything with new eyes.</p>
     </a>
     
   </div>
