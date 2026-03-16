@@ -211,6 +211,7 @@ document.getElementById('plane-link').addEventListener('animationend',function()
 </div>
 <div id="genre-panel" style="display:none; margin-bottom: 16px; padding: 10px; border: 3px dashed #6b8f5c; background-color: #fafbf8; flex-wrap: wrap; justify-content: center; gap: 8px 20px;">
   <a href="#" class="filter-link" data-type="all" data-val="all" style="color: #2d5016; text-decoration: underline; font-size: 16px; font-weight: bold;">All Posts</a>
+  <a href="#" class="filter-link" data-type="genres" data-val="discussion" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Discussion</a>
   <a href="#" class="filter-link" data-type="genres" data-val="guides" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Guides</a>
   <a href="#" class="filter-link" data-type="genres" data-val="horror" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Horror</a>
   <a href="#" class="filter-link" data-type="genres" data-val="lists" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Lists</a>
@@ -220,26 +221,31 @@ document.getElementById('plane-link').addEventListener('animationend',function()
 <div id="tag-panel" style="display:none; margin-bottom: 16px; padding: 10px; border: 3px dashed #6b8f5c; background-color: #fafbf8; flex-wrap: wrap; justify-content: center; gap: 8px 20px;">
   <a href="#" class="filter-link" data-type="all" data-val="all" style="color: #2d5016; text-decoration: underline; font-size: 16px; font-weight: bold;">All Posts</a>
   <a href="#" class="filter-link" data-type="tags" data-val="adulthood" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Adulthood</a>
+  <a href="#" class="filter-link" data-type="tags" data-val="authors" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Authors</a>
   <a href="#" class="filter-link" data-type="tags" data-val="bedtime" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Bedtime</a>
   <a href="#" class="filter-link" data-type="tags" data-val="coming-of-age" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Coming Of Age</a>
   <a href="#" class="filter-link" data-type="tags" data-val="cosmic-horror" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Cosmic Horror</a>
   <a href="#" class="filter-link" data-type="tags" data-val="couples" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Couples</a>
-  <a href="#" class="filter-link" data-type="tags" data-val="cozy" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Cozy</a>
   <span id="tag-panel-more" style="display:none;">
+    <a href="#" class="filter-link" data-type="tags" data-val="cozy" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Cozy</a>
     <a href="#" class="filter-link" data-type="tags" data-val="cyberpunk" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Cyberpunk</a>
     <a href="#" class="filter-link" data-type="tags" data-val="deep-cuts" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Deep Cuts</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="discussion" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Discussion</a>
     <a href="#" class="filter-link" data-type="tags" data-val="dystopian" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Dystopian</a>
     <a href="#" class="filter-link" data-type="tags" data-val="existential" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Existential</a>
     <a href="#" class="filter-link" data-type="tags" data-val="gothic" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Gothic</a>
     <a href="#" class="filter-link" data-type="tags" data-val="hidden-gems" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Hidden Gems</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="historical-fiction" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Historical Fiction</a>
     <a href="#" class="filter-link" data-type="tags" data-val="horror" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Horror</a>
     <a href="#" class="filter-link" data-type="tags" data-val="literary-fiction" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Literary Fiction</a>
     <a href="#" class="filter-link" data-type="tags" data-val="mystery" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Mystery</a>
     <a href="#" class="filter-link" data-type="tags" data-val="obscure-books" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Obscure Books</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="opinion" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Opinion</a>
     <a href="#" class="filter-link" data-type="tags" data-val="post-apocalyptic" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Post Apocalyptic</a>
     <a href="#" class="filter-link" data-type="tags" data-val="psychological-horror" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Psychological Horror</a>
     <a href="#" class="filter-link" data-type="tags" data-val="quarter-life-crisis" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Quarter Life Crisis</a>
     <a href="#" class="filter-link" data-type="tags" data-val="reading-aloud" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Reading Aloud</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="reading-habits" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Reading Habits</a>
     <a href="#" class="filter-link" data-type="tags" data-val="recommendations" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Recommendations</a>
     <a href="#" class="filter-link" data-type="tags" data-val="relationships" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Relationships</a>
     <a href="#" class="filter-link" data-type="tags" data-val="sci-fi" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Sci Fi</a>
@@ -247,6 +253,7 @@ document.getElementById('plane-link').addEventListener('animationend',function()
     <a href="#" class="filter-link" data-type="tags" data-val="sleep" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Sleep</a>
     <a href="#" class="filter-link" data-type="tags" data-val="splatterpunk" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Splatterpunk</a>
     <a href="#" class="filter-link" data-type="tags" data-val="techno-horror" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Techno Horror</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="tips" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Tips</a>
     <a href="#" class="filter-link" data-type="tags" data-val="underrated" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Underrated</a>
     <a href="#" class="filter-link" data-type="tags" data-val="weird-fiction" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Weird Fiction</a>
     <a href="#" class="filter-link" data-type="tags" data-val="wholesome" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Wholesome</a>
@@ -255,6 +262,24 @@ document.getElementById('plane-link').addEventListener('animationend',function()
 </div>
 
 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<a href="/blog/why-readers-are-breaking-up-with-favorite-authors/" class="blog-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-genres="discussion" data-tags="reading-habits authors opinion discussion">
+      <img src="/images/blog/why-readers-are-breaking-up-with-favorite-authors.webp" alt="Why Readers Are Breaking Up With Favorite Authors" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">Why Readers Are Breaking Up With Favorite Authors</h3>
+      <p class="text-xs mt-1 mb-2" style="color: #888;">March 15, 2026</p>
+      <p class="text-sm mt-0 mb-0" style="color: #555;">Sometimes you don't stop reading an author because something went wrong. You stop because you changed, or they did, or you finally noticed something that was there all along.</p>
+    </a>
+<a href="/blog/why-readers-hate-historical-fiction-real-people/" class="blog-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-genres="discussion" data-tags="historical-fiction literary-fiction opinion reading-habits">
+      <img src="/images/blog/why-readers-hate-historical-fiction-real-people.webp" alt="Why Readers Hate Historical Fiction About Real People" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">Why Readers Hate Historical Fiction About Real People</h3>
+      <p class="text-xs mt-1 mb-2" style="color: #888;">March 15, 2026</p>
+      <p class="text-sm mt-0 mb-0" style="color: #555;">Historical fiction is one of the most beloved genres in publishing. It's also one of the most contentious, and the fault line runs right through real people's graves.</p>
+    </a>
+<a href="/blog/why-reading-multiple-books-at-once-is-better/" class="blog-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-genres="discussion" data-tags="reading-habits tips opinion discussion">
+      <img src="/images/blog/why-reading-multiple-books-at-once-is-better.webp" alt="Why Reading Multiple Books at Once Is Actually Better" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">Why Reading Multiple Books at Once Is Actually Better</h3>
+      <p class="text-xs mt-1 mb-2" style="color: #888;">March 15, 2026</p>
+      <p class="text-sm mt-0 mb-0" style="color: #555;">One book at a time sounds noble. But juggling two or three? That's how you actually read more — and enjoy it.</p>
+    </a>
 <a href="/blog/adult-dystopian-fiction-not-ya/" class="blog-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-genres="lists sci-fi" data-tags="sci-fi dystopian literary-fiction post-apocalyptic">
       <img src="/images/blog/adult-dystopian-fiction-not-ya.webp" alt="15 Dystopian Books That Aren't About Teenagers Saving the World" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">15 Dystopian Books That Aren't About Teenagers Saving the World</h3>
