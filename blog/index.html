@@ -260,12 +260,14 @@ document.getElementById('plane-link').addEventListener('animationend',function()
 <div id="genre-panel" style="display:none; margin-bottom: 16px; padding: 10px; border: 3px dashed #6b8f5c; background-color: #fafbf8; flex-wrap: wrap; justify-content: center; gap: 8px 20px;">
   <a href="#" class="filter-link" data-type="all" data-val="all" style="color: #2d5016; text-decoration: underline; font-size: 16px; font-weight: bold;">All Posts</a>
   <a href="#" class="filter-link" data-type="genres" data-val="discussion" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Discussion</a>
+  <a href="#" class="filter-link" data-type="genres" data-val="fantasy" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Fantasy</a>
   <a href="#" class="filter-link" data-type="genres" data-val="guides" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Guides</a>
   <a href="#" class="filter-link" data-type="genres" data-val="horror" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Horror</a>
   <a href="#" class="filter-link" data-type="genres" data-val="lists" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Lists</a>
   <a href="#" class="filter-link" data-type="genres" data-val="literary-fiction" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Literary Fiction</a>
-  <a href="#" class="filter-link" data-type="genres" data-val="romance" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Romance</a>
   <span id="genre-panel-more" style="display:none;">
+    <a href="#" class="filter-link" data-type="genres" data-val="opinion" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Opinion</a>
+    <a href="#" class="filter-link" data-type="genres" data-val="romance" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Romance</a>
     <a href="#" class="filter-link" data-type="genres" data-val="sci-fi" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Sci-Fi</a>
   </span>
   <a href="#" id="genre-panel-seeall" style="color: #2d5016; text-decoration: underline; font-size: 14px; font-style: italic; width: 100%; text-align: center; display: block; margin-top: 4px;">See all...</a>
@@ -288,6 +290,7 @@ document.getElementById('plane-link').addEventListener('animationend',function()
     <a href="#" class="filter-link" data-type="tags" data-val="discussion" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Discussion</a>
     <a href="#" class="filter-link" data-type="tags" data-val="dystopian" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Dystopian</a>
     <a href="#" class="filter-link" data-type="tags" data-val="existential" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Existential</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="fantasy-romance" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Fantasy Romance</a>
     <a href="#" class="filter-link" data-type="tags" data-val="feminist" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Feminist</a>
     <a href="#" class="filter-link" data-type="tags" data-val="finding-purpose" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Finding Purpose</a>
     <a href="#" class="filter-link" data-type="tags" data-val="gothic" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Gothic</a>
@@ -309,6 +312,7 @@ document.getElementById('plane-link').addEventListener('animationend',function()
     <a href="#" class="filter-link" data-type="tags" data-val="relationships" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Relationships</a>
     <a href="#" class="filter-link" data-type="tags" data-val="retellings" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Retellings</a>
     <a href="#" class="filter-link" data-type="tags" data-val="romance" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Romance</a>
+    <a href="#" class="filter-link" data-type="tags" data-val="romantasy" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Romantasy</a>
     <a href="#" class="filter-link" data-type="tags" data-val="sci-fi" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Sci Fi</a>
     <a href="#" class="filter-link" data-type="tags" data-val="scientific-thriller" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Scientific Thriller</a>
     <a href="#" class="filter-link" data-type="tags" data-val="self-help" style="color: #2d5016; text-decoration: underline; font-size: 16px;">Self Help</a>
@@ -325,6 +329,12 @@ document.getElementById('plane-link').addEventListener('animationend',function()
 </div>
 
 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+<a href="/blog/acotar-spice-level-discussion/" class="blog-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-genres="opinion fantasy romance" data-tags="romantasy fantasy-romance reading-habits opinion discussion">
+      <img src="/images/blog/acotar-spice-level-discussion.webp" alt="ACOTAR Is Not Porn (And That Says More About You Than the Books)" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">ACOTAR Is Not Porn (And That Says More About You Than the Books)</h3>
+      <p class="text-xs mt-1 mb-2" style="color: #888;">2026-03-23</p>
+      <p class="text-sm mt-0 mb-0" style="color: #555;">Calling ACOTAR "fairy porn" reveals a specific kind of cultural illiteracy — and the people spreading the label are often the ones who've never read it.</p>
+    </a>
 <a href="/blog/books-like-james-by-percival-everett/" class="blog-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-genres="lists literary-fiction" data-tags="literary-fiction books-like retellings historical-fiction pulitzer">
       <img src="/images/blog/books-like-james-by-percival-everett.webp" alt="12 Books Like James by Percival Everett" class="mx-auto" style="max-height: 200px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-base font-bold mt-3 mb-0" style="color: #2d5016;">12 Books Like James by Percival Everett</h3>
