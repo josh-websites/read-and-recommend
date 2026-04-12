@@ -254,100 +254,104 @@ document.getElementById('plane-link').addEventListener('animationend',function()
   <p class="text-sm mt-1 mb-0" style="color: #c9e4b0;">Top 24 most-mentioned authors on Read &amp; Recommend</p>
 </div>
 
+<div class="mb-4">
+  <input type="search" id="author-search" placeholder="Search by author name..." autocomplete="off"
+    style="width: 100%; padding: 8px 12px; border: 2px solid #4a6741; background: #f9faf6; color: #2d5016; font-size: 15px; outline: none; box-sizing: border-box;" />
+</div>
 <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-<a href="/authors/stephen-king/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/stephen-king/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="stephen king">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Stephen King</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">5 books</p>
     </a>
-<a href="/authors/becky-chambers/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/becky-chambers/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="becky chambers">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Becky Chambers</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/octavia-butler/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/octavia-butler/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="octavia butler">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Octavia Butler</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/andy-weir/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/andy-weir/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="andy weir">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Andy Weir</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/neil-gaiman/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/neil-gaiman/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="neil gaiman">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Neil Gaiman</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/agatha-christie/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/agatha-christie/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="agatha christie">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Agatha Christie</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/cormac-mccarthy/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/cormac-mccarthy/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="cormac mccarthy">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Cormac McCarthy</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/blake-crouch/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/blake-crouch/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="blake crouch">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Blake Crouch</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/shirley-jackson/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/shirley-jackson/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="shirley jackson">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Shirley Jackson</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/margaret-atwood/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/margaret-atwood/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="margaret atwood">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Margaret Atwood</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/kazuo-ishiguro/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/kazuo-ishiguro/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="kazuo ishiguro">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Kazuo Ishiguro</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/brandon-sanderson/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/brandon-sanderson/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="brandon sanderson">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Brandon Sanderson</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/jane-austen/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/jane-austen/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="jane austen">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Jane Austen</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/madeline-miller/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/madeline-miller/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="madeline miller">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Madeline Miller</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/toni-morrison/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/toni-morrison/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="toni morrison">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Toni Morrison</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/gillian-flynn/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/gillian-flynn/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="gillian flynn">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Gillian Flynn</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/george-orwell/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/george-orwell/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="george orwell">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">George Orwell</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/martha-wells/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/martha-wells/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="martha wells">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Martha Wells</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/donna-tartt/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/donna-tartt/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="donna tartt">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Donna Tartt</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/fredrik-backman/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/fredrik-backman/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="fredrik backman">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Fredrik Backman</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/ray-bradbury/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/ray-bradbury/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="ray bradbury">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Ray Bradbury</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">2 books</p>
     </a>
-<a href="/authors/john-scalzi/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/john-scalzi/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="john scalzi">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">John Scalzi</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">3 books</p>
     </a>
-<a href="/authors/susanna-clarke/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/susanna-clarke/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="susanna clarke">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Susanna Clarke</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
-<a href="/authors/haruki-murakami/" class="block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4">
+<a href="/authors/haruki-murakami/" class="author-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-search="haruki murakami">
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Haruki Murakami</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">1 book</p>
     </a>
@@ -355,6 +359,21 @@ document.getElementById('plane-link').addEventListener('animationend',function()
 <div class="text-center mt-8 mb-4">
   <a href="/authors/all/" class="inline-block px-6 py-3 font-bold no-underline hover:no-underline transition" style="background-color: #2d5016; color: #f0f7e6; border: 2px solid #4a6741;">See All 201 Authors</a>
 </div>
+
+<script>
+(function() {
+  var searchInput = document.getElementById('author-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var query = this.value.toLowerCase().trim();
+      document.querySelectorAll('.author-card').forEach(function(card) {
+        var searchData = card.getAttribute('data-search') || '';
+        card.style.display = query === '' || searchData.indexOf(query) !== -1 ? '' : 'none';
+      });
+    });
+  }
+})();
+</script>
 
       </div>
 
