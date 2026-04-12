@@ -251,12 +251,13 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <div class="p-4 md:p-5">
         <div class="retro-section-header text-center py-3 px-4 mb-5">
   <h1 class="text-2xl md:text-3xl font-bold m-0">Most Popular Books</h1>
-  <p class="text-sm mt-1 mb-0" style="color: #c9e4b0;">219 books in the Read &amp; Recommend library</p>
+  <p class="text-sm mt-1 mb-0" style="color: #c9e4b0;">231 books in the Read &amp; Recommend library</p>
 </div>
 
 <div class="text-center mb-4 flex flex-wrap justify-center gap-2" id="book-filters">
   <a href="#" class="book-filter-link" data-val="all" style="color: #2d5016; text-decoration: underline; font-size: 15px; font-weight: bold;">All</a>
   <a href="#" class="book-filter-link" data-val="fiction" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Fiction</a>
+  <a href="#" class="book-filter-link" data-val="literary-criticism" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Literary Criticism</a>
   <a href="#" class="book-filter-link" data-val="young-adult-fiction" style="color: #2d5016; text-decoration: underline; font-size: 15px;">Young Adult Fiction</a>
 </div>
 <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
@@ -290,6 +291,11 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Dark Matter</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Blake Crouch</p>
     </a>
+<a href="/books/1984/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-e4e28a4a1833.webp" alt="1984" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">1984</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">George Orwell</p>
+    </a>
 <a href="/books/circe/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="young-adult-fiction">
       <img src="/images/books/book-c83b2c668c63.webp" alt="Circe" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Circe</h3>
@@ -300,15 +306,20 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Hyperion</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Dan Simmons</p>
     </a>
-<a href="/books/1984/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
-      <img src="/images/books/book-e4e28a4a1833.webp" alt="1984" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
-      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">1984</h3>
-      <p class="text-xs mt-1 mb-0" style="color: #888;">George Orwell</p>
+<a href="/books/jane-eyre/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
+      <img src="/images/books/book-4731d20881a8.webp" alt="Jane Eyre" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Jane Eyre</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Charlotte Brontë</p>
     </a>
 <a href="/books/never-let-me-go/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
       <img src="/images/books/book-f3c5039d5dc1.webp" alt="Never Let Me Go" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Never Let Me Go</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Kazuo Ishiguro</p>
+    </a>
+<a href="/books/red-rising/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-787829a74592.webp" alt="Red Rising" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Red Rising</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Pierce Brown</p>
     </a>
 <a href="/books/the-road/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
       <img src="/images/books/book-851507645dd0.webp" alt="The Road" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
@@ -319,11 +330,6 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <img src="/images/books/book-a950753de330.webp" alt="Dungeon Crawler Carl" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Dungeon Crawler Carl</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Matt Dinniman</p>
-    </a>
-<a href="/books/red-rising/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
-      <img src="/images/books/book-787829a74592.webp" alt="Red Rising" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
-      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Red Rising</h3>
-      <p class="text-xs mt-1 mb-0" style="color: #888;">Pierce Brown</p>
     </a>
 <a href="/books/demon-copperhead/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
       <img src="/images/books/book-1c063345f331.webp" alt="Demon Copperhead" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
@@ -340,6 +346,11 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">The Bell Jar</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Sylvia Plath</p>
     </a>
+<a href="/books/anna-karenina/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="literary-criticism">
+      <img src="/images/books/book-900b813d262d.webp" alt="Anna Karenina" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Anna Karenina</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">Leo Tolstoy</p>
+    </a>
 <a href="/books/brave-new-world/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="">
       <img src="/images/books/book-a20e66666b5e.webp" alt="Brave New World" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Brave New World</h3>
@@ -349,6 +360,11 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <img src="/images/books/book-b0b0765beb30.webp" alt="Gone Girl" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Gone Girl</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Gillian Flynn</p>
+    </a>
+<a href="/books/stoner/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
+      <img src="/images/books/book-41387c02bbb1.webp" alt="Stoner" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
+      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Stoner</h3>
+      <p class="text-xs mt-1 mb-0" style="color: #888;">John Williams</p>
     </a>
 <a href="/books/the-hobbit/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="young-adult-fiction">
       <img src="/images/books/book-d2a269943121.webp" alt="The Hobbit" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
@@ -365,24 +381,9 @@ document.getElementById('plane-link').addEventListener('animationend',function()
       <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Children of Time</h3>
       <p class="text-xs mt-1 mb-0" style="color: #888;">Adrian Tchaikovsky</p>
     </a>
-<a href="/books/parable-of-the-sower/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
-      <img src="/images/books/book-f6910a79e704.webp" alt="Parable of the Sower" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
-      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Parable of the Sower</h3>
-      <p class="text-xs mt-1 mb-0" style="color: #888;">Octavia E. Butler</p>
-    </a>
-<a href="/books/stoner/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
-      <img src="/images/books/book-41387c02bbb1.webp" alt="Stoner" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
-      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Stoner</h3>
-      <p class="text-xs mt-1 mb-0" style="color: #888;">John Williams</p>
-    </a>
-<a href="/books/out/" class="book-card block retro-card no-underline hover:no-underline transition overflow-hidden text-center p-4" data-categories="fiction">
-      <img src="/images/books/book-e61e9bdd1b06.webp" alt="Out" class="mx-auto" style="max-height: 180px; width: auto; border: 3px double #4a6741; padding: 4px; background-color: #f9faf6;" loading="lazy" />
-      <h3 class="text-sm font-bold mt-3 mb-0" style="color: #2d5016;">Out</h3>
-      <p class="text-xs mt-1 mb-0" style="color: #888;">Natsuo Kirino</p>
-    </a>
 </div>
 <div class="text-center mt-8 mb-4">
-  <a href="/books/all/" class="inline-block px-6 py-3 font-bold no-underline hover:no-underline transition" style="background-color: #2d5016; color: #f0f7e6; border: 2px solid #4a6741;">See All 219 Books</a>
+  <a href="/books/all/" class="inline-block px-6 py-3 font-bold no-underline hover:no-underline transition" style="background-color: #2d5016; color: #f0f7e6; border: 2px solid #4a6741;">See All 231 Books</a>
 </div>
 
 <script>
