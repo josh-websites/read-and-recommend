@@ -5,7 +5,6 @@ Allow: /
 
 # Blog content
 Allow: /blog/
-Allow: /blog/tag/
 Allow: /books/
 Allow: /authors/
 
