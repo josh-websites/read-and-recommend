@@ -10,6 +10,7 @@ Allow: /authors/
 
 # Block non-content paths
 Disallow: /.git/
+Disallow: /images/pinterest/
 
 # Sitemap
 Sitemap: https://readandrecommend.com/sitemap.xml
